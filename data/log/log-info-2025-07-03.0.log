@@ -1,0 +1,156 @@
+25-07-03.01:07:58.749 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=47m13s342ms).
+25-07-03.01:43:06.993 [redisson-netty-1-6] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xd578ac09, L:/192.168.1.221:57718 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.01:43:06.993 [redisson-netty-1-8] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x4de03913, L:/192.168.1.221:57719 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.01:43:06.994 [redisson-netty-1-10] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x9ad9c2f3, L:/192.168.1.221:57720 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.01:43:06.993 [redisson-netty-1-12] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x4615fbe9, L:/192.168.1.221:57721 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.01:43:06.993 [redisson-netty-1-2] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x20ce581f, L:/192.168.1.221:57716 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.01:43:06.994 [redisson-netty-1-3] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x627f7d10, L:/192.168.1.221:57717 - R:192.168.1.221/192.168.1.221:16379]
+java.io.IOException: Operation timed out
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:330)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:284)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:259)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:417)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+25-07-03.02:21:50.479 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h13m51s731ms).
+25-07-03.04:01:48.145 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h39m57s666ms).
+25-07-03.05:18:14.011 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h16m25s866ms).
+25-07-03.06:25:55.573 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h7m41s562ms).
+25-07-03.07:14:46.528 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=48m50s954ms).
+25-07-03.07:16:31.291 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m44s764ms).
+25-07-03.07:35:56.844 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=19m25s553ms).
+25-07-03.07:38:06.513 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m9s669ms).
+25-07-03.07:55:27.898 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=17m21s385ms).
+25-07-03.09:07:49.740 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h12m21s842ms).
+25-07-03.10:21:04.488 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h13m14s748ms).
+25-07-03.11:53:00.753 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h31m56s265ms).
+25-07-03.12:57:53.685 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h4m52s932ms).
+25-07-03.13:57:16.682 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=59m22s996ms).
+25-07-03.15:15:04.374 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h17m47s693ms).
+25-07-03.16:27:04.025 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h11m59s651ms).
+25-07-03.17:31:46.128 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h4m42s103ms).
+25-07-03.18:05:00.057 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=33m13s929ms).
+25-07-03.18:22:20.285 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=17m20s228ms).
+25-07-03.18:24:05.064 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m44s779ms).
+25-07-03.18:44:33.217 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=20m28s153ms).
+25-07-03.18:46:42.897 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m9s680ms).
+25-07-03.19:03:52.686 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=17m9s789ms).
+25-07-03.19:22:49.095 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=18m56s409ms).
+25-07-03.19:24:58.791 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m9s695ms).
+25-07-03.19:45:58.422 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=20m59s632ms).
+25-07-03.19:48:08.096 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=2m9s674ms).
+25-07-03.20:07:17.855 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=19m9s758ms).
+25-07-03.20:08:55.409 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m37s555ms).
+25-07-03.20:10:40.160 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m44s751ms).
+25-07-03.20:21:41.455 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=11m1s295ms).
+25-07-03.20:23:04.589 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m23s134ms).
+25-07-03.21:11:05.977 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=48m1s388ms).
+25-07-03.22:32:57.662 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h21m51s685ms).
+25-07-03.23:51:28.681 [HikariCP housekeeper] WARN  HikariPool             - HikariCP - Thread starvation or clock leap detected (housekeeper delta=1h18m31s19ms).

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ollama 流式输出演示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+<div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl flex flex-col overflow-hidden">
+    <!-- 对话内容 -->
+    <div id="output" class="flex-1 overflow-y-auto whitespace-pre-wrap p-6 bg-gray-50 text-gray-800 font-mono h-[500px]">
+        <!-- 对话内容将显示在这里 -->
+    </div>
+
+    <!-- 输入框区域 -->
+    <div class="flex items-center space-x-2 p-4 border-t border-gray-200 bg-white">
+        <input
+                id="messageInput"
+                type="text"
+                placeholder="请输入消息..."
+                class="flex-1 border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        />
+        <button
+                onclick="sendMessage()"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-xl"
+        >
+            发送
+        </button>
+    </div>
+</div>
+
+<script>
+    async function sendMessage() {
+        const input = document.getElementById("messageInput");
+        const output = document.getElementById("output");
+        const message = input.value.trim();
+
+        if (!message) return;
+
+        // 清空输入
+        input.value = "";
+
+        // 展示用户消息
+        output.textContent += `\n你：${message}\nAI：`;
+
+        const response = await fetch(`http://localhost:8090/api/v1/ollama/generate_stream?model=deepseek-r1:1.5b&message=${encodeURIComponent(message)}`);
+
+        const reader = response.body
+                .pipeThrough(new TextDecoderStream())
+                .getReader();
+
+        let buffer = "";
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            buffer += value;
+
+            try {
+                const chunks = JSON.parse(buffer);
+                chunks.forEach(chunk => {
+                    const content = chunk?.result?.output?.content || chunk?.results?.[0]?.output?.content;
+                    if (content) {
+                        output.textContent += content;
+                    }
+                });
+                buffer = ""; // 清空已解析内容
+            } catch (e) {
+                // 不是完整 JSON，继续缓冲
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
