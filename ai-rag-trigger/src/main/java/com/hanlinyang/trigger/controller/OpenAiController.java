@@ -10,6 +10,8 @@ import org.springframework.ai.chat.prompt.SystemPromptTemplate;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.ollama.OllamaChatClient;
 import org.springframework.ai.ollama.api.OllamaOptions;
+import org.springframework.ai.openai.OpenAiChatClient;
+import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.vectorstore.PgVectorStore;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.web.bind.annotation.*;
@@ -22,11 +24,11 @@ import java.util.stream.Collectors;
 
 @RestController()
 @CrossOrigin("*")
-@RequestMapping("/api/v1/ollama/")
-public class OllamaController implements IAiService {
+@RequestMapping("/api/v1/openAi/")
+public class OpenAiController implements IAiService {
 
     @Resource
-    private OllamaChatClient chatClient;
+    private OpenAiChatClient chatClient;
     @Resource
     private PgVectorStore pgVectorStore;
     @RequestMapping(value = "generate_stream_rag", method = RequestMethod.GET)
@@ -34,7 +36,7 @@ public class OllamaController implements IAiService {
     @Override
     @GetMapping("/generate")
     public ChatResponse generate(String model, String message) {
-        return chatClient.call(new Prompt(message, OllamaOptions.create().withModel(model)));
+        return chatClient.call(new Prompt(message, OpenAiChatOptions.builder().withModel(model).build()));
     }
 
     @Override
@@ -42,8 +44,9 @@ public class OllamaController implements IAiService {
     public Flux<ChatResponse> generateStream(String model, String message) {
         return chatClient.stream(new Prompt(
                 message,
-                OllamaOptions.create()
-                        .withModel(model)
+                OpenAiChatOptions.builder()
+                    .withModel(model)
+                    .build()
         ));
     }
 
@@ -73,8 +76,9 @@ public class OllamaController implements IAiService {
 
         return chatClient.stream(new Prompt(
                 messages,
-                OllamaOptions.create()
-                        .withModel(model)
+                OpenAiChatOptions.builder()
+                    .withModel(model)
+                    .build()
         ));
     }
 }
